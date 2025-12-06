@@ -1,36 +1,35 @@
 # TruEstate Retail Sales Management System
 
-## Overview
-A comprehensive retail sales management dashboard built for TruEstate. This system parses sales data from a CSV, providing a high-performance backend API for searching, filtering, and sorting, coupled with a premium, pixel-perfect React frontend.
+## 1. Overview
+A comprehensive retail sales management dashboard built for TruEstate. This system parses sales data from a CSV into an **optimized SQLite database** for high performance. It provides a robust backend API for searching, filtering, and sorting, coupled with a premium, pixel-perfect React frontend.
+* **Live Application:** [https://truestate-sms.vercel.app/](https://truestate-sms.vercel.app/)
+* **Backend API:** [https://truestate-sms.onrender.com/api](https://truestate-sms.onrender.com/api)
 
-## Tech Stack
-- **Backend**: Node.js, Express.js, CSV Parser
-- **Frontend**: React, Vite, Vanilla CSS
-- **Monorepo**: Managed via NPM scripts
+## 2. Tech Stack
+* **Backend:** Node.js, Express.js, SQLite (better-sqlite3), CSV Parser
+* **Frontend:** React, Vite, Vanilla CSS / CSS Modules
+* **Monorepo:** Managed via NPM scripts
 
-## Implementation Summaries
+## 3. Search Implementation Summary
+Full-text, case-insensitive search implemented on the server-side using SQL queries. It targets:
+* `Customer Name`
+* `Phone Number`
 
-### Search
-Full-text, case-insensitive search implemented on the server-side, targeting:
-- `Customer Name`
-- `Phone Number`
-
-### Filtering
+## 4. Filter Implementation Summary
 Advanced filtering logic allows simultaneous multi-selection of:
-- **Categorical**: Region, Gender, Category, Payment Method, Tags
-- **Ranges**: Age (min/max), Date (start/end)
+* **Categorical:** Region, Gender, Category, Payment Method, Tags
+* **Ranges:** Age (min/max), Date (start/end)
 
-### Sorting
-Supports sorting by:
-- **Date** (Newest First)
-- **Quantity**
-- **Customer Name** (A-Z)
+## 5. Sorting Implementation Summary
+Supports sorting via SQL `ORDER BY` clauses for:
+* **Date** (Newest First)
+* **Quantity**
+* **Customer Name** (A-Z)
 
-### Pagination
-Server-side pagination defaults to **10 items per page**. The frontend automatically persists search and filter states while navigating through pages.
+## 6. Pagination Implementation Summary
+Server-side pagination defaults to **10 items per page** using `LIMIT` and `OFFSET`. The frontend automatically persists search and filter states while navigating through pages.
 
-## Setup Instructions
-
+## 7. Setup Instructions
 1.  **Install Dependencies**
     ```bash
     npm run install:all
@@ -41,10 +40,5 @@ Server-side pagination defaults to **10 items per page**. The frontend automatic
     ```bash
     npm start
     ```
-    - **Backend**: [http://localhost:5000](http://localhost:5000)
-    - **Frontend**: [http://localhost:5173](http://localhost:5173)
-
----
-###  Live Deployment
-* **Live Application:** [https://truestate-sms.vercel.app/](https://truestate-sms.vercel.app/)
-* **Backend API:** [https://truestate-sms.onrender.com/api](https://truestate-sms.onrender.com/api)
+    * **Backend:** [http://localhost:5000](http://localhost:5000)
+    * **Frontend:** [http://localhost:5173](http://localhost:5173)
