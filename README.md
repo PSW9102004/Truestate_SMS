@@ -45,4 +45,6 @@ Server-side pagination defaults to **10 items per page**. The frontend automatic
     - **Frontend**: [http://localhost:5173](http://localhost:5173)
 
 ---
-
+###  Live Deployment
+* **Live Application:** [https://truestate-sms.vercel.app/](https://truestate-sms.vercel.app/)
+* **Backend API:** [https://truestate-sms.onrender.com/api](https://truestate-sms.onrender.com/api)
