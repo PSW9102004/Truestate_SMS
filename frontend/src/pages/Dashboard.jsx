@@ -28,7 +28,7 @@ const Dashboard = () => {
             {/* Header */}
             <header className={styles.header}>
                 <div className={`container ${styles.headerContent}`}>
-                    <h1 className={styles.logo}>TruEstate</h1>
+                    <img src="/vite.svg" alt="TruEstate App" className={styles.logo} style={{ height: '32px' }} />
                     <div className={styles.actions}>
                         <SearchBar value={filters.search} onSearch={handleSearch} />
                         <button
